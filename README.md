@@ -10,6 +10,6 @@ A filter is needed where request will be wrapped.
 A custom HttpRequestWrapper is needed with all parameter access methods overridden. Request body should be parsed in constructor and stored as a field.
 getInputStream and getReader methods should be redefined as well. They return values depend on the stored request body.
 Custom class extending ServletInputStream is required since this one is abstract.
-This 4 combined will allow you to use getParameter without interference with getInputStream and getReader methods.
 
+This 4 combined will allow you to use getParameter without interference with getInputStream and getReader methods.
 Mind that manual request parameter parsing may get complicated with multipart requests. But that's another topic.
